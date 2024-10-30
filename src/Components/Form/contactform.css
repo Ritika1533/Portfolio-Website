@@ -1,0 +1,120 @@
+.contact{
+  padding:30px  30px ;
+  margin-bottom: 22px;
+  margin-top: -30px;
+}
+.head-contact {
+  display: flex;
+  flex-direction: column; /* Add this line to change the direction to column */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+.contact h6{
+  font-weight: 100;
+  font-size: large;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+.contact h1{
+  font-size: 3rem;
+} 
+.social-contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 35px; /* Reduced padding to fit more in a single line */
+  border: 1px solid #777;
+  border-radius: 25px;
+  width: fit-content;
+ max-width: 632px; 
+  margin: 0 auto;
+  
+  flex-wrap: wrap; /* Prevent wrapping to ensure single-line display */
+  overflow-x: auto; /* Enable horizontal scroll if necessary */
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 8px; /* Reduce padding for smaller screens */
+  flex: 1 1 auto; /* Allow flexible width */
+  justify-content: center;
+}
+.social-icon a {
+  position: relative; /* Establish a positioning context */
+  text-decoration: none; /* Start with no underline */
+  color: #777; /* Set initial text color */
+}
+
+.social-icon a::after {
+  content: ""; /* Required for pseudo-element */
+  position: absolute; /* Position it relative to the anchor */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Position at the bottom of the text */
+  width: 100%; /* Full width of the text */
+  height: 1px; /* Height of the underline */
+  background-color: #777; /* Color of the underline */
+  transform: scaleX(0); /* Start with zero width */
+  transition: transform 0.3s ease; /* Transition for the underline */
+}
+
+.social-icon a:hover::after {
+  transform: scaleX(1); /* Expand underline to full width on hover */
+}
+.footer {
+  height: 10rem;
+  background-color: rgb(39, 38, 38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+  color:antiquewhite;
+  font-size: medium;
+}
+
+.end {
+  height: 2rem;
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.footer-content p{
+  font-size: 12px;
+  margin-top: 4px;
+}
+hr {
+  width: 20%;              /* Adjust width as needed */
+  height: 1px;            /* Thickness of the line */
+  background-color: #777; /* Color of the line */
+  border: none;           /* Remove default border */
+  margin: 15px auto 0;   /* Center the line with top margin */
+}
+@media (max-width: 768px) {
+  .social-contact {
+    padding: 10px 20px; /* Further reduce padding for tablets */
+    border-radius: 12px; /* Smaller border radius */
+  }
+  
+  .social-icon {
+    gap: 6px; /* Reduce gap between icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-contact {
+    padding: 8px 15px; /* Minimal padding for mobile */
+    border-radius: 10px; /* Smaller border radius for mobile */
+  }
+  .contact h1{
+    font-size: 2rem;
+  }
+  .social-icon {
+    gap: 4px; /* Minimal gap for very small screens */
+  }
+}
